@@ -62,3 +62,4 @@ ionic cordova run android
 or
 
 ionic integrations enable capacitor
+ionic build
