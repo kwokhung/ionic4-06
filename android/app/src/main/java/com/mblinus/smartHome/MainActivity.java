@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.mblinus.smartHome;
 
 import android.os.Bundle;
 

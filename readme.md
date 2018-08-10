@@ -62,7 +62,7 @@ ionic cordova run android
 or
 
 ionic integrations enable capacitor
-ionic build
+ionic build (--prod)
 ionic cap add android
 ionic cap sync (ionic cap copy & ionic cap update)
 npm rm @ionic-native/core @ionic-native/splash-screen @ionic-native/status-bar

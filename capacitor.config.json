@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.mblinus.smartHome",
   "appName": "ionic4-06",
   "bundledWebRuntime": false,
   "webDir": "www"

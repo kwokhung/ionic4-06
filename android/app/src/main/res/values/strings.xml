@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">ionic4-06</string>
     <string name="title_activity_main">ionic4-06</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="fileprovider_authority">io.ionic.starter.fileprovider</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="package_name">com.mblinus.smartHome</string>
+    <string name="fileprovider_authority">com.mblinus.smartHome.fileprovider</string>
+    <string name="custom_url_scheme">com.mblinus.smartHome</string>
 </resources>

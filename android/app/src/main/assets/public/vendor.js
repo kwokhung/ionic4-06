@@ -63993,923 +63993,1244 @@ var VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('6.1.2')
 
 /***/ }),
 
-/***/ "./node_modules/@ionic-native/core/bootstrap.js":
-/*!******************************************************!*\
-  !*** ./node_modules/@ionic-native/core/bootstrap.js ***!
-  \******************************************************/
-/*! exports provided: checkReady */
+/***/ "./node_modules/@capacitor/core/dist/esm/core-plugin-definitions.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/core-plugin-definitions.js ***!
+  \**************************************************************************/
+/*! exports provided: CameraSource, CameraResultType, FilesystemDirectory, FilesystemEncoding, HapticsImpactStyle, ActionSheetOptionStyle, PhotosAlbumType, StatusBarStyle */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkReady", function() { return checkReady; });
-function checkReady() {
-    var DEVICE_READY_TIMEOUT = 5000;
-    // To help developers using cordova, we listen for the device ready event and
-    // log an error if it didn't fire in a reasonable amount of time. Generally,
-    // when this happens, developers should remove and reinstall plugins, since
-    // an inconsistent plugin is often the culprit.
-    var before = Date.now();
-    var didFireReady = false;
-    document.addEventListener('deviceready', function () {
-        console.log("Ionic Native: deviceready event fired after " + (Date.now() - before) + " ms");
-        didFireReady = true;
-    });
-    setTimeout(function () {
-        if (!didFireReady && window.cordova) {
-            console.warn("Ionic Native: deviceready did not fire within " + DEVICE_READY_TIMEOUT + "ms. This can happen when plugins are in an inconsistent state. Try removing plugins from plugins/ and reinstalling them.");
-        }
-    }, DEVICE_READY_TIMEOUT);
-}
-//# sourceMappingURL=bootstrap.js.map
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CameraSource", function() { return CameraSource; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CameraResultType", function() { return CameraResultType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilesystemDirectory", function() { return FilesystemDirectory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FilesystemEncoding", function() { return FilesystemEncoding; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HapticsImpactStyle", function() { return HapticsImpactStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionSheetOptionStyle", function() { return ActionSheetOptionStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PhotosAlbumType", function() { return PhotosAlbumType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StatusBarStyle", function() { return StatusBarStyle; });
+var CameraSource;
+(function (CameraSource) {
+    CameraSource["Prompt"] = "PROMPT";
+    CameraSource["Camera"] = "CAMERA";
+    CameraSource["Photos"] = "PHOTOS";
+})(CameraSource || (CameraSource = {}));
+var CameraResultType;
+(function (CameraResultType) {
+    CameraResultType["Uri"] = "uri";
+    CameraResultType["Base64"] = "base64";
+})(CameraResultType || (CameraResultType = {}));
+var FilesystemDirectory;
+(function (FilesystemDirectory) {
+    /**
+     * The Application directory
+     */
+    FilesystemDirectory["Application"] = "APPLICATION";
+    /**
+     * The Documents directory
+     */
+    FilesystemDirectory["Documents"] = "DOCUMENTS";
+    /**
+     * The Data directory
+     */
+    FilesystemDirectory["Data"] = "DATA";
+    /**
+     * The Cache directory
+     */
+    FilesystemDirectory["Cache"] = "CACHE";
+    /**
+     * The external directory (Android only)
+     */
+    FilesystemDirectory["External"] = "EXTERNAL";
+    /**
+     * The external storage directory (Android only)
+     */
+    FilesystemDirectory["ExternalStorage"] = "EXTERNAL_STORAGE";
+})(FilesystemDirectory || (FilesystemDirectory = {}));
+var FilesystemEncoding;
+(function (FilesystemEncoding) {
+    FilesystemEncoding["UTF8"] = "utf8";
+    FilesystemEncoding["ASCII"] = "ascii";
+    FilesystemEncoding["UTF16"] = "utf18";
+})(FilesystemEncoding || (FilesystemEncoding = {}));
+var HapticsImpactStyle;
+(function (HapticsImpactStyle) {
+    HapticsImpactStyle["Heavy"] = "HEAVY";
+    HapticsImpactStyle["Medium"] = "MEDIUM";
+    HapticsImpactStyle["Light"] = "LIGHT";
+})(HapticsImpactStyle || (HapticsImpactStyle = {}));
+var ActionSheetOptionStyle;
+(function (ActionSheetOptionStyle) {
+    ActionSheetOptionStyle["Default"] = "DEFAULT";
+    ActionSheetOptionStyle["Destructive"] = "DESTRUCTIVE";
+    ActionSheetOptionStyle["Cancel"] = "CANCEL";
+})(ActionSheetOptionStyle || (ActionSheetOptionStyle = {}));
+var PhotosAlbumType;
+(function (PhotosAlbumType) {
+    /**
+     * Album is a "smart" album (such as Favorites or Recently Added)
+     */
+    PhotosAlbumType["Smart"] = "smart";
+    /**
+     * Album is a cloud-shared album
+     */
+    PhotosAlbumType["Shared"] = "shared";
+    /**
+     * Album is a user-created album
+     */
+    PhotosAlbumType["User"] = "user";
+})(PhotosAlbumType || (PhotosAlbumType = {}));
+var StatusBarStyle;
+(function (StatusBarStyle) {
+    StatusBarStyle["Dark"] = "DARK";
+    StatusBarStyle["Light"] = "LIGHT";
+})(StatusBarStyle || (StatusBarStyle = {}));
+//# sourceMappingURL=core-plugin-definitions.js.map
 
 /***/ }),
 
-/***/ "./node_modules/@ionic-native/core/decorators/common.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@ionic-native/core/decorators/common.js ***!
-  \**************************************************************/
-/*! exports provided: ERR_CORDOVA_NOT_AVAILABLE, ERR_PLUGIN_NOT_INSTALLED, getPromise, wrapPromise, checkAvailability, instanceAvailability, setIndex, callCordovaPlugin, callInstance, getPlugin, get, pluginWarn, cordovaWarn, wrap, wrapInstance */
+/***/ "./node_modules/@capacitor/core/dist/esm/global.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/global.js ***!
+  \*********************************************************/
+/*! exports provided: Capacitor, Plugins */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ERR_CORDOVA_NOT_AVAILABLE", function() { return ERR_CORDOVA_NOT_AVAILABLE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ERR_PLUGIN_NOT_INSTALLED", function() { return ERR_PLUGIN_NOT_INSTALLED; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPromise", function() { return getPromise; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wrapPromise", function() { return wrapPromise; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkAvailability", function() { return checkAvailability; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "instanceAvailability", function() { return instanceAvailability; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setIndex", function() { return setIndex; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "callCordovaPlugin", function() { return callCordovaPlugin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "callInstance", function() { return callInstance; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPlugin", function() { return getPlugin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get", function() { return get; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pluginWarn", function() { return pluginWarn; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cordovaWarn", function() { return cordovaWarn; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wrap", function() { return wrap; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wrapInstance", function() { return wrapInstance; });
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Capacitor", function() { return Capacitor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Plugins", function() { return Plugins; });
+/* harmony import */ var _web_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./web-runtime */ "./node_modules/@capacitor/core/dist/esm/web-runtime.js");
 
-var ERR_CORDOVA_NOT_AVAILABLE = { error: 'cordova_not_available' };
-var ERR_PLUGIN_NOT_INSTALLED = { error: 'plugin_not_installed' };
-function getPromise(callback) {
-    var tryNativePromise = function () {
-        if (Promise) {
-            return new Promise(function (resolve, reject) {
-                callback(resolve, reject);
-            });
-        }
-        else {
-            console.error('No Promise support or polyfill found. To enable Ionic Native support, please add the es6-promise polyfill before this script, or run with a library like Angular or on a recent browser.');
-        }
-    };
-    if (window.angular) {
-        var injector = window.angular
-            .element(document.querySelector('[ng-app]') || document.body)
-            .injector();
-        if (injector) {
-            var $q = injector.get('$q');
-            return $q(function (resolve, reject) {
-                callback(resolve, reject);
-            });
-        }
-        console.warn("Angular 1 was detected but $q couldn't be retrieved. This is usually when the app is not bootstrapped on the html or body tag. Falling back to native promises which won't trigger an automatic digest when promises resolve.");
-    }
-    return tryNativePromise();
+// Create our default Capacitor instance, which will be
+// overridden on native platforms
+var Capacitor = new _web_runtime__WEBPACK_IMPORTED_MODULE_0__["CapacitorWeb"]();
+Capacitor = window.Capacitor || Capacitor;
+// Export window.Capacitor if not available already (ex: web)
+if (!window.Capacitor) {
+    window.Capacitor = Capacitor;
 }
-function wrapPromise(pluginObj, methodName, args, opts) {
-    if (opts === void 0) { opts = {}; }
-    var pluginResult, rej;
-    var p = getPromise(function (resolve, reject) {
-        if (opts.destruct) {
-            pluginResult = callCordovaPlugin(pluginObj, methodName, args, opts, function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return resolve(args);
-            }, function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return reject(args);
-            });
-        }
-        else {
-            pluginResult = callCordovaPlugin(pluginObj, methodName, args, opts, resolve, reject);
-        }
-        rej = reject;
-    });
-    // Angular throws an error on unhandled rejection, but in this case we have already printed
-    // a warning that Cordova is undefined or the plugin is uninstalled, so there is no reason
-    // to error
-    if (pluginResult && pluginResult.error) {
-        p.catch(function () { });
-        typeof rej === 'function' && rej(pluginResult.error);
-    }
-    return p;
-}
-function wrapOtherPromise(pluginObj, methodName, args, opts) {
-    if (opts === void 0) { opts = {}; }
-    return getPromise(function (resolve, reject) {
-        var pluginResult = callCordovaPlugin(pluginObj, methodName, args, opts);
-        if (pluginResult) {
-            if (pluginResult.error) {
-                reject(pluginResult.error);
-            }
-            else if (pluginResult.then) {
-                pluginResult.then(resolve).catch(reject);
-            }
-        }
-        else {
-            reject({ error: 'unexpected_error' });
-        }
-    });
-}
-function wrapObservable(pluginObj, methodName, args, opts) {
-    if (opts === void 0) { opts = {}; }
-    return new rxjs__WEBPACK_IMPORTED_MODULE_0__["Observable"](function (observer) {
-        var pluginResult;
-        if (opts.destruct) {
-            pluginResult = callCordovaPlugin(pluginObj, methodName, args, opts, function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return observer.next(args);
-            }, function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return observer.error(args);
-            });
-        }
-        else {
-            pluginResult = callCordovaPlugin(pluginObj, methodName, args, opts, observer.next.bind(observer), observer.error.bind(observer));
-        }
-        if (pluginResult && pluginResult.error) {
-            observer.error(pluginResult.error);
-            observer.complete();
-        }
-        return function () {
-            try {
-                if (opts.clearFunction) {
-                    if (opts.clearWithArgs) {
-                        return callCordovaPlugin(pluginObj, opts.clearFunction, args, opts, observer.next.bind(observer), observer.error.bind(observer));
-                    }
-                    return callCordovaPlugin(pluginObj, opts.clearFunction, []);
-                }
-            }
-            catch (e) {
-                console.warn('Unable to clear the previous observable watch for', pluginObj.constructor.getPluginName(), methodName);
-                console.warn(e);
-            }
-        };
-    });
-}
-/**
- * Wrap the event with an observable
- * @private
- * @param event even name
- * @param element The element to attach the event listener to
- * @returns {Observable}
- */
-function wrapEventObservable(event, element) {
-    if (element) {
-        get(window, element);
-    }
-    else {
-        element = window;
-    }
-    return Object(rxjs__WEBPACK_IMPORTED_MODULE_0__["fromEvent"])(element, event);
-}
-function checkAvailability(plugin, methodName, pluginName) {
-    var pluginRef, pluginInstance, pluginPackage;
-    if (typeof plugin === 'string') {
-        pluginRef = plugin;
-    }
-    else {
-        pluginRef = plugin.constructor.getPluginRef();
-        pluginName = plugin.constructor.getPluginName();
-        pluginPackage = plugin.constructor.getPluginInstallName();
-    }
-    pluginInstance = getPlugin(pluginRef);
-    if (!pluginInstance ||
-        (!!methodName && typeof pluginInstance[methodName] === 'undefined')) {
-        if (!window.cordova) {
-            cordovaWarn(pluginName, methodName);
-            return ERR_CORDOVA_NOT_AVAILABLE;
-        }
-        pluginWarn(pluginName, pluginPackage, methodName);
-        return ERR_PLUGIN_NOT_INSTALLED;
-    }
-    return true;
-}
-/**
- * Checks if _objectInstance exists and has the method/property
- * @private
- */
-function instanceAvailability(pluginObj, methodName) {
-    return (pluginObj._objectInstance &&
-        (!methodName ||
-            typeof pluginObj._objectInstance[methodName] !== 'undefined'));
-}
-function setIndex(args, opts, resolve, reject) {
-    if (opts === void 0) { opts = {}; }
-    // ignore resolve and reject in case sync
-    if (opts.sync) {
-        return args;
-    }
-    // If the plugin method expects myMethod(success, err, options)
-    if (opts.callbackOrder === 'reverse') {
-        // Get those arguments in the order [resolve, reject, ...restOfArgs]
-        args.unshift(reject);
-        args.unshift(resolve);
-    }
-    else if (opts.callbackStyle === 'node') {
-        args.push(function (err, result) {
-            if (err) {
-                reject(err);
-            }
-            else {
-                resolve(result);
-            }
-        });
-    }
-    else if (opts.callbackStyle === 'object' &&
-        opts.successName &&
-        opts.errorName) {
-        var obj = {};
-        obj[opts.successName] = resolve;
-        obj[opts.errorName] = reject;
-        args.push(obj);
-    }
-    else if (typeof opts.successIndex !== 'undefined' ||
-        typeof opts.errorIndex !== 'undefined') {
-        var setSuccessIndex = function () {
-            // If we've specified a success/error index
-            if (opts.successIndex > args.length) {
-                args[opts.successIndex] = resolve;
-            }
-            else {
-                args.splice(opts.successIndex, 0, resolve);
-            }
-        };
-        var setErrorIndex = function () {
-            // We don't want that the reject cb gets spliced into the position of an optional argument that has not been
-            // defined and thus causing non expected behavior.
-            if (opts.errorIndex > args.length) {
-                args[opts.errorIndex] = reject; // insert the reject fn at the correct specific index
-            }
-            else {
-                args.splice(opts.errorIndex, 0, reject); // otherwise just splice it into the array
-            }
-        };
-        if (opts.successIndex > opts.errorIndex) {
-            setErrorIndex();
-            setSuccessIndex();
-        }
-        else {
-            setSuccessIndex();
-            setErrorIndex();
-        }
-    }
-    else {
-        // Otherwise, let's tack them on to the end of the argument list
-        // which is 90% of cases
-        args.push(resolve);
-        args.push(reject);
-    }
-    return args;
-}
-function callCordovaPlugin(pluginObj, methodName, args, opts, resolve, reject) {
-    if (opts === void 0) { opts = {}; }
-    // Try to figure out where the success/error callbacks need to be bound
-    // to our promise resolve/reject handlers.
-    args = setIndex(args, opts, resolve, reject);
-    var availabilityCheck = checkAvailability(pluginObj, methodName);
-    if (availabilityCheck === true) {
-        var pluginInstance = getPlugin(pluginObj.constructor.getPluginRef());
-        return pluginInstance[methodName].apply(pluginInstance, args);
-    }
-    else {
-        return availabilityCheck;
-    }
-}
-function callInstance(pluginObj, methodName, args, opts, resolve, reject) {
-    if (opts === void 0) { opts = {}; }
-    args = setIndex(args, opts, resolve, reject);
-    if (instanceAvailability(pluginObj, methodName)) {
-        return pluginObj._objectInstance[methodName].apply(pluginObj._objectInstance, args);
-    }
-}
-function getPlugin(pluginRef) {
-    return get(window, pluginRef);
-}
-function get(element, path) {
-    var paths = path.split('.');
-    var obj = element;
-    for (var i = 0; i < paths.length; i++) {
-        if (!obj) {
-            return null;
-        }
-        obj = obj[paths[i]];
-    }
-    return obj;
-}
-function pluginWarn(pluginName, plugin, method) {
-    if (method) {
-        console.warn('Native: tried calling ' +
-            pluginName +
-            '.' +
-            method +
-            ', but the ' +
-            pluginName +
-            ' plugin is not installed.');
-    }
-    else {
-        console.warn("Native: tried accessing the " + pluginName + " plugin but it's not installed.");
-    }
-    if (plugin) {
-        console.warn("Install the " + pluginName + " plugin: 'ionic cordova plugin add " + plugin + "'");
-    }
-}
-/**
- * @private
- * @param pluginName
- * @param method
- */
-function cordovaWarn(pluginName, method) {
-    if (method) {
-        console.warn('Native: tried calling ' +
-            pluginName +
-            '.' +
-            method +
-            ', but Cordova is not available. Make sure to include cordova.js or run in a device/simulator');
-    }
-    else {
-        console.warn('Native: tried accessing the ' +
-            pluginName +
-            ' plugin but Cordova is not available. Make sure to include cordova.js or run in a device/simulator');
-    }
-}
-/**
- * @private
- */
-var wrap = function (pluginObj, methodName, opts) {
-    if (opts === void 0) { opts = {}; }
-    return function () {
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        if (opts.sync) {
-            // Sync doesn't wrap the plugin with a promise or observable, it returns the result as-is
-            return callCordovaPlugin(pluginObj, methodName, args, opts);
-        }
-        else if (opts.observable) {
-            return wrapObservable(pluginObj, methodName, args, opts);
-        }
-        else if (opts.eventObservable && opts.event) {
-            return wrapEventObservable(opts.event, opts.element);
-        }
-        else if (opts.otherPromise) {
-            return wrapOtherPromise(pluginObj, methodName, args, opts);
-        }
-        else {
-            return wrapPromise(pluginObj, methodName, args, opts);
-        }
-    };
-};
-/**
- * @private
- */
-function wrapInstance(pluginObj, methodName, opts) {
-    if (opts === void 0) { opts = {}; }
-    return function () {
-        var args = [];
-        for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i] = arguments[_i];
-        }
-        if (opts.sync) {
-            return callInstance(pluginObj, methodName, args, opts);
-        }
-        else if (opts.observable) {
-            return new rxjs__WEBPACK_IMPORTED_MODULE_0__["Observable"](function (observer) {
-                var pluginResult;
-                if (opts.destruct) {
-                    pluginResult = callInstance(pluginObj, methodName, args, opts, function () {
-                        var args = [];
-                        for (var _i = 0; _i < arguments.length; _i++) {
-                            args[_i] = arguments[_i];
-                        }
-                        return observer.next(args);
-                    }, function () {
-                        var args = [];
-                        for (var _i = 0; _i < arguments.length; _i++) {
-                            args[_i] = arguments[_i];
-                        }
-                        return observer.error(args);
-                    });
-                }
-                else {
-                    pluginResult = callInstance(pluginObj, methodName, args, opts, observer.next.bind(observer), observer.error.bind(observer));
-                }
-                if (pluginResult && pluginResult.error) {
-                    observer.error(pluginResult.error);
-                }
-                return function () {
-                    try {
-                        if (opts.clearWithArgs) {
-                            return callInstance(pluginObj, opts.clearFunction, args, opts, observer.next.bind(observer), observer.error.bind(observer));
-                        }
-                        return callInstance(pluginObj, opts.clearFunction, []);
-                    }
-                    catch (e) {
-                        console.warn('Unable to clear the previous observable watch for', pluginObj.constructor.getPluginName(), methodName);
-                        console.warn(e);
-                    }
-                };
-            });
-        }
-        else if (opts.otherPromise) {
-            return getPromise(function (resolve, reject) {
-                var result;
-                if (opts.destruct) {
-                    result = callInstance(pluginObj, methodName, args, opts, function () {
-                        var args = [];
-                        for (var _i = 0; _i < arguments.length; _i++) {
-                            args[_i] = arguments[_i];
-                        }
-                        return resolve(args);
-                    }, function () {
-                        var args = [];
-                        for (var _i = 0; _i < arguments.length; _i++) {
-                            args[_i] = arguments[_i];
-                        }
-                        return reject(args);
-                    });
-                }
-                else {
-                    result = callInstance(pluginObj, methodName, args, opts, resolve, reject);
-                }
-                if (result && result.then) {
-                    result.then(resolve, reject);
-                }
-                else {
-                    reject();
-                }
-            });
-        }
-        else {
-            var pluginResult_1, rej_1;
-            var p = getPromise(function (resolve, reject) {
-                if (opts.destruct) {
-                    pluginResult_1 = callInstance(pluginObj, methodName, args, opts, function () {
-                        var args = [];
-                        for (var _i = 0; _i < arguments.length; _i++) {
-                            args[_i] = arguments[_i];
-                        }
-                        return resolve(args);
-                    }, function () {
-                        var args = [];
-                        for (var _i = 0; _i < arguments.length; _i++) {
-                            args[_i] = arguments[_i];
-                        }
-                        return reject(args);
-                    });
-                }
-                else {
-                    pluginResult_1 = callInstance(pluginObj, methodName, args, opts, resolve, reject);
-                }
-                rej_1 = reject;
-            });
-            // Angular throws an error on unhandled rejection, but in this case we have already printed
-            // a warning that Cordova is undefined or the plugin is uninstalled, so there is no reason
-            // to error
-            if (pluginResult_1 && pluginResult_1.error) {
-                p.catch(function () { });
-                typeof rej_1 === 'function' && rej_1(pluginResult_1.error);
-            }
-            return p;
-        }
-    };
-}
-//# sourceMappingURL=common.js.map
+var Plugins = Capacitor.Plugins;
+
+//# sourceMappingURL=global.js.map
 
 /***/ }),
 
-/***/ "./node_modules/@ionic-native/core/decorators/cordova-function-override.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@ionic-native/core/decorators/cordova-function-override.js ***!
-  \*********************************************************************************/
-/*! exports provided: cordovaFunctionOverride */
+/***/ "./node_modules/@capacitor/core/dist/esm/index.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/index.js ***!
+  \********************************************************/
+/*! exports provided: CameraSource, CameraResultType, FilesystemDirectory, FilesystemEncoding, HapticsImpactStyle, ActionSheetOptionStyle, PhotosAlbumType, StatusBarStyle, Capacitor, Plugins, registerWebPlugin, WebPluginRegistry, WebPlugins, WebPlugin, mergeWebPlugins, mergeWebPlugin, BrowserPluginWeb, Browser, CameraPluginWeb, Camera, ClipboardPluginWeb, Clipboard, GeolocationPluginWeb, Geolocation, DevicePluginWeb, Device, SharePluginWeb, Share, ModalsPluginWeb, Modals, StoragePluginWeb, Storage, ToastPluginWeb, Toast */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cordovaFunctionOverride", function() { return cordovaFunctionOverride; });
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common */ "./node_modules/@ionic-native/core/decorators/common.js");
+/* harmony import */ var _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core-plugin-definitions */ "./node_modules/@capacitor/core/dist/esm/core-plugin-definitions.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CameraSource", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["CameraSource"]; });
 
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CameraResultType", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["CameraResultType"]; });
 
-function overrideFunction(pluginObj, methodName) {
-    return new rxjs__WEBPACK_IMPORTED_MODULE_0__["Observable"](function (observer) {
-        var availabilityCheck = Object(_common__WEBPACK_IMPORTED_MODULE_1__["checkAvailability"])(pluginObj, methodName);
-        if (availabilityCheck === true) {
-            var pluginInstance_1 = Object(_common__WEBPACK_IMPORTED_MODULE_1__["getPlugin"])(pluginObj.constructor.getPluginRef());
-            pluginInstance_1[methodName] = observer.next.bind(observer);
-            return function () { return (pluginInstance_1[methodName] = function () { }); };
-        }
-        else {
-            observer.error(availabilityCheck);
-            observer.complete();
-        }
-    });
-}
-function cordovaFunctionOverride(pluginObj, methodName, args) {
-    if (args === void 0) { args = []; }
-    return overrideFunction(pluginObj, methodName);
-}
-//# sourceMappingURL=cordova-function-override.js.map
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FilesystemDirectory", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["FilesystemDirectory"]; });
 
-/***/ }),
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "FilesystemEncoding", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["FilesystemEncoding"]; });
 
-/***/ "./node_modules/@ionic-native/core/decorators/cordova-instance.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ionic-native/core/decorators/cordova-instance.js ***!
-  \************************************************************************/
-/*! exports provided: cordovaInstance */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "HapticsImpactStyle", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["HapticsImpactStyle"]; });
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cordovaInstance", function() { return cordovaInstance; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common */ "./node_modules/@ionic-native/core/decorators/common.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ActionSheetOptionStyle", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["ActionSheetOptionStyle"]; });
 
-function cordovaInstance(pluginObj, methodName, config, args) {
-    args = Array.from(args);
-    return Object(_common__WEBPACK_IMPORTED_MODULE_0__["wrapInstance"])(pluginObj, methodName, config).apply(this, args);
-}
-//# sourceMappingURL=cordova-instance.js.map
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "PhotosAlbumType", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["PhotosAlbumType"]; });
 
-/***/ }),
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StatusBarStyle", function() { return _core_plugin_definitions__WEBPACK_IMPORTED_MODULE_0__["StatusBarStyle"]; });
 
-/***/ "./node_modules/@ionic-native/core/decorators/cordova-property.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@ionic-native/core/decorators/cordova-property.js ***!
-  \************************************************************************/
-/*! exports provided: cordovaPropertyGet, cordovaPropertySet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./global */ "./node_modules/@capacitor/core/dist/esm/global.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Capacitor", function() { return _global__WEBPACK_IMPORTED_MODULE_1__["Capacitor"]; });
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cordovaPropertyGet", function() { return cordovaPropertyGet; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cordovaPropertySet", function() { return cordovaPropertySet; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common */ "./node_modules/@ionic-native/core/decorators/common.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Plugins", function() { return _global__WEBPACK_IMPORTED_MODULE_1__["Plugins"]; });
 
-function cordovaPropertyGet(pluginObj, key) {
-    if (Object(_common__WEBPACK_IMPORTED_MODULE_0__["checkAvailability"])(pluginObj, key) === true) {
-        return Object(_common__WEBPACK_IMPORTED_MODULE_0__["getPlugin"])(pluginObj.constructor.getPluginRef())[key];
-    }
-    return null;
-}
-function cordovaPropertySet(pluginObj, key, value) {
-    if (Object(_common__WEBPACK_IMPORTED_MODULE_0__["checkAvailability"])(pluginObj, key) === true) {
-        Object(_common__WEBPACK_IMPORTED_MODULE_0__["getPlugin"])(pluginObj.constructor.getPluginRef())[key] = value;
-    }
-}
-//# sourceMappingURL=cordova-property.js.map
+/* harmony import */ var _web_plugins__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./web-plugins */ "./node_modules/@capacitor/core/dist/esm/web-plugins.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "registerWebPlugin", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["registerWebPlugin"]; });
 
-/***/ }),
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BrowserPluginWeb", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["BrowserPluginWeb"]; });
 
-/***/ "./node_modules/@ionic-native/core/decorators/cordova.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@ionic-native/core/decorators/cordova.js ***!
-  \***************************************************************/
-/*! exports provided: cordova */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Browser", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["Browser"]; });
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cordova", function() { return cordova; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common */ "./node_modules/@ionic-native/core/decorators/common.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CameraPluginWeb", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["CameraPluginWeb"]; });
 
-function cordova(pluginObj, methodName, config, args) {
-    return Object(_common__WEBPACK_IMPORTED_MODULE_0__["wrap"])(pluginObj, methodName, config).apply(this, args);
-}
-//# sourceMappingURL=cordova.js.map
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Camera", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["Camera"]; });
 
-/***/ }),
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ClipboardPluginWeb", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["ClipboardPluginWeb"]; });
 
-/***/ "./node_modules/@ionic-native/core/decorators/instance-property.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@ionic-native/core/decorators/instance-property.js ***!
-  \*************************************************************************/
-/*! exports provided: instancePropertyGet, instancePropertySet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Clipboard", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["Clipboard"]; });
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "instancePropertyGet", function() { return instancePropertyGet; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "instancePropertySet", function() { return instancePropertySet; });
-function instancePropertyGet(pluginObj, key) {
-    if (pluginObj._objectInstance && pluginObj._objectInstance[key]) {
-        return pluginObj._objectInstance[key];
-    }
-    return null;
-}
-function instancePropertySet(pluginObj, key, value) {
-    if (pluginObj._objectInstance && pluginObj._objectInstance[key]) {
-        pluginObj._objectInstance[key] = value;
-    }
-}
-//# sourceMappingURL=instance-property.js.map
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GeolocationPluginWeb", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["GeolocationPluginWeb"]; });
 
-/***/ }),
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Geolocation", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["Geolocation"]; });
 
-/***/ "./node_modules/@ionic-native/core/decorators/interfaces.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@ionic-native/core/decorators/interfaces.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DevicePluginWeb", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["DevicePluginWeb"]; });
 
-//# sourceMappingURL=interfaces.js.map
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Device", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["Device"]; });
 
-/***/ }),
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SharePluginWeb", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["SharePluginWeb"]; });
 
-/***/ "./node_modules/@ionic-native/core/index.js":
-/*!**************************************************!*\
-  !*** ./node_modules/@ionic-native/core/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Share", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["Share"]; });
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./node_modules/@ionic-native/core/bootstrap.js");
-/* harmony import */ var _ionic_native_plugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ionic-native-plugin */ "./node_modules/@ionic-native/core/ionic-native-plugin.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "IonicNativePlugin", function() { return _ionic_native_plugin__WEBPACK_IMPORTED_MODULE_1__["IonicNativePlugin"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ModalsPluginWeb", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["ModalsPluginWeb"]; });
 
-/* harmony import */ var _decorators_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./decorators/common */ "./node_modules/@ionic-native/core/decorators/common.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "checkAvailability", function() { return _decorators_common__WEBPACK_IMPORTED_MODULE_2__["checkAvailability"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Modals", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["Modals"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "instanceAvailability", function() { return _decorators_common__WEBPACK_IMPORTED_MODULE_2__["instanceAvailability"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StoragePluginWeb", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["StoragePluginWeb"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "wrap", function() { return _decorators_common__WEBPACK_IMPORTED_MODULE_2__["wrap"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Storage", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["Storage"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getPromise", function() { return _decorators_common__WEBPACK_IMPORTED_MODULE_2__["getPromise"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ToastPluginWeb", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["ToastPluginWeb"]; });
 
-/* harmony import */ var _decorators_cordova__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./decorators/cordova */ "./node_modules/@ionic-native/core/decorators/cordova.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cordova", function() { return _decorators_cordova__WEBPACK_IMPORTED_MODULE_3__["cordova"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Toast", function() { return _web_plugins__WEBPACK_IMPORTED_MODULE_2__["Toast"]; });
 
-/* harmony import */ var _decorators_cordova_function_override__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./decorators/cordova-function-override */ "./node_modules/@ionic-native/core/decorators/cordova-function-override.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cordovaFunctionOverride", function() { return _decorators_cordova_function_override__WEBPACK_IMPORTED_MODULE_4__["cordovaFunctionOverride"]; });
+/* harmony import */ var _web_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./web/index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WebPluginRegistry", function() { return _web_index__WEBPACK_IMPORTED_MODULE_3__["WebPluginRegistry"]; });
 
-/* harmony import */ var _decorators_cordova_instance__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./decorators/cordova-instance */ "./node_modules/@ionic-native/core/decorators/cordova-instance.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cordovaInstance", function() { return _decorators_cordova_instance__WEBPACK_IMPORTED_MODULE_5__["cordovaInstance"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WebPlugins", function() { return _web_index__WEBPACK_IMPORTED_MODULE_3__["WebPlugins"]; });
 
-/* harmony import */ var _decorators_cordova_property__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./decorators/cordova-property */ "./node_modules/@ionic-native/core/decorators/cordova-property.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cordovaPropertyGet", function() { return _decorators_cordova_property__WEBPACK_IMPORTED_MODULE_6__["cordovaPropertyGet"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "WebPlugin", function() { return _web_index__WEBPACK_IMPORTED_MODULE_3__["WebPlugin"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cordovaPropertySet", function() { return _decorators_cordova_property__WEBPACK_IMPORTED_MODULE_6__["cordovaPropertySet"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mergeWebPlugins", function() { return _web_index__WEBPACK_IMPORTED_MODULE_3__["mergeWebPlugins"]; });
 
-/* harmony import */ var _decorators_instance_property__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./decorators/instance-property */ "./node_modules/@ionic-native/core/decorators/instance-property.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "instancePropertyGet", function() { return _decorators_instance_property__WEBPACK_IMPORTED_MODULE_7__["instancePropertyGet"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "instancePropertySet", function() { return _decorators_instance_property__WEBPACK_IMPORTED_MODULE_7__["instancePropertySet"]; });
-
-/* harmony import */ var _decorators_interfaces__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./decorators/interfaces */ "./node_modules/@ionic-native/core/decorators/interfaces.js");
-/* harmony import */ var _decorators_interfaces__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_decorators_interfaces__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _decorators_interfaces__WEBPACK_IMPORTED_MODULE_8__) if(["IonicNativePlugin","checkAvailability","instanceAvailability","wrap","getPromise","cordova","cordovaFunctionOverride","cordovaInstance","cordovaPropertyGet","cordovaPropertySet","instancePropertyGet","instancePropertySet","default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _decorators_interfaces__WEBPACK_IMPORTED_MODULE_8__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-// Decorators
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "mergeWebPlugin", function() { return _web_index__WEBPACK_IMPORTED_MODULE_3__["mergeWebPlugin"]; });
 
 
 
 
 
-
-
-Object(_bootstrap__WEBPACK_IMPORTED_MODULE_0__["checkReady"])();
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ "./node_modules/@ionic-native/core/ionic-native-plugin.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@ionic-native/core/ionic-native-plugin.js ***!
-  \****************************************************************/
-/*! exports provided: IonicNativePlugin */
+/***/ "./node_modules/@capacitor/core/dist/esm/util.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/util.js ***!
+  \*******************************************************/
+/*! exports provided: extend, uuid4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonicNativePlugin", function() { return IonicNativePlugin; });
-/* harmony import */ var _decorators_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./decorators/common */ "./node_modules/@ionic-native/core/decorators/common.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util */ "./node_modules/@ionic-native/core/util.js");
-
-
-var IonicNativePlugin = /** @class */ (function () {
-    function IonicNativePlugin() {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "extend", function() { return extend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uuid4", function() { return uuid4; });
+var extend = function (target) {
+    var objs = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        objs[_i - 1] = arguments[_i];
     }
-    /**
-     * Returns a boolean that indicates whether the plugin is installed
-     * @return {boolean}
-     */
-    IonicNativePlugin.installed = function () { return Object(_decorators_common__WEBPACK_IMPORTED_MODULE_0__["checkAvailability"])(this.pluginRef) === true; };
-    /**
-     * Returns the original plugin object
-     */
-    IonicNativePlugin.getPlugin = function () { return Object(_util__WEBPACK_IMPORTED_MODULE_1__["get"])(window, this.pluginRef); };
-    /**
-     * Returns the plugin's name
-     */
-    IonicNativePlugin.getPluginName = function () { return this.pluginName; };
-    /**
-     * Returns the plugin's reference
-     */
-    IonicNativePlugin.getPluginRef = function () { return this.pluginRef; };
-    /**
-     * Returns the plugin's install name
-     */
-    IonicNativePlugin.getPluginInstallName = function () { return this.plugin; };
-    /**
-     * Returns the plugin's supported platforms
-     */
-    IonicNativePlugin.getSupportedPlatforms = function () { return this.platforms || []; };
-    return IonicNativePlugin;
-}());
-
-//# sourceMappingURL=ionic-native-plugin.js.map
-
-/***/ }),
-
-/***/ "./node_modules/@ionic-native/core/util.js":
-/*!*************************************************!*\
-  !*** ./node_modules/@ionic-native/core/util.js ***!
-  \*************************************************/
-/*! exports provided: get, getPromise */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "get", function() { return get; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPromise", function() { return getPromise; });
-/**
- * @private
- */
-function get(element, path) {
-    var paths = path.split('.');
-    var obj = element;
-    for (var i = 0; i < paths.length; i++) {
-        if (!obj) {
-            return null;
+    objs.forEach(function (o) {
+        if (o && typeof (o) === 'object') {
+            for (var k in o) {
+                if (o.hasOwnProperty(k)) {
+                    target[k] = o[k];
+                }
+            }
         }
-        obj = obj[paths[i]];
-    }
-    return obj;
-}
-/**
- * @private
- */
-function getPromise(callback) {
-    if (callback === void 0) { callback = function () { }; }
-    var tryNativePromise = function () {
-        if (window.Promise) {
-            return new Promise(function (resolve, reject) {
-                callback(resolve, reject);
-            });
-        }
-        else {
-            console.error('No Promise support or polyfill found. To enable Ionic Native support, please add the es6-promise polyfill before this script, or run with a library like Angular or on a recent browser.');
-        }
-    };
-    return tryNativePromise();
-}
+    });
+    return target;
+};
+var uuid4 = function () {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+};
 //# sourceMappingURL=util.js.map
 
 /***/ }),
 
-/***/ "./node_modules/@ionic-native/splash-screen/ngx/index.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@ionic-native/splash-screen/ngx/index.js ***!
-  \***************************************************************/
-/*! exports provided: SplashScreen */
+/***/ "./node_modules/@capacitor/core/dist/esm/web-plugins.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web-plugins.js ***!
+  \**************************************************************/
+/*! exports provided: registerWebPlugin, BrowserPluginWeb, Browser, CameraPluginWeb, Camera, ClipboardPluginWeb, Clipboard, GeolocationPluginWeb, Geolocation, DevicePluginWeb, Device, SharePluginWeb, Share, ModalsPluginWeb, Modals, StoragePluginWeb, Storage, ToastPluginWeb, Toast */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SplashScreen", function() { return SplashScreen; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ionic_native_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/core */ "./node_modules/@ionic-native/core/index.js");
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerWebPlugin", function() { return registerWebPlugin; });
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./global */ "./node_modules/@capacitor/core/dist/esm/global.js");
+/* harmony import */ var _web_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./web/index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+/* harmony import */ var _web_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./web/browser */ "./node_modules/@capacitor/core/dist/esm/web/browser.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "BrowserPluginWeb", function() { return _web_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserPluginWeb"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Browser", function() { return _web_browser__WEBPACK_IMPORTED_MODULE_2__["Browser"]; });
+
+/* harmony import */ var _web_camera__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./web/camera */ "./node_modules/@capacitor/core/dist/esm/web/camera.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CameraPluginWeb", function() { return _web_camera__WEBPACK_IMPORTED_MODULE_3__["CameraPluginWeb"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Camera", function() { return _web_camera__WEBPACK_IMPORTED_MODULE_3__["Camera"]; });
+
+/* harmony import */ var _web_clipboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./web/clipboard */ "./node_modules/@capacitor/core/dist/esm/web/clipboard.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ClipboardPluginWeb", function() { return _web_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardPluginWeb"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Clipboard", function() { return _web_clipboard__WEBPACK_IMPORTED_MODULE_4__["Clipboard"]; });
+
+/* harmony import */ var _web_geolocation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./web/geolocation */ "./node_modules/@capacitor/core/dist/esm/web/geolocation.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GeolocationPluginWeb", function() { return _web_geolocation__WEBPACK_IMPORTED_MODULE_5__["GeolocationPluginWeb"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Geolocation", function() { return _web_geolocation__WEBPACK_IMPORTED_MODULE_5__["Geolocation"]; });
+
+/* harmony import */ var _web_device__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./web/device */ "./node_modules/@capacitor/core/dist/esm/web/device.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "DevicePluginWeb", function() { return _web_device__WEBPACK_IMPORTED_MODULE_6__["DevicePluginWeb"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Device", function() { return _web_device__WEBPACK_IMPORTED_MODULE_6__["Device"]; });
+
+/* harmony import */ var _web_share__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./web/share */ "./node_modules/@capacitor/core/dist/esm/web/share.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SharePluginWeb", function() { return _web_share__WEBPACK_IMPORTED_MODULE_7__["SharePluginWeb"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Share", function() { return _web_share__WEBPACK_IMPORTED_MODULE_7__["Share"]; });
+
+/* harmony import */ var _web_modals__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./web/modals */ "./node_modules/@capacitor/core/dist/esm/web/modals.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ModalsPluginWeb", function() { return _web_modals__WEBPACK_IMPORTED_MODULE_8__["ModalsPluginWeb"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Modals", function() { return _web_modals__WEBPACK_IMPORTED_MODULE_8__["Modals"]; });
+
+/* harmony import */ var _web_storage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./web/storage */ "./node_modules/@capacitor/core/dist/esm/web/storage.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "StoragePluginWeb", function() { return _web_storage__WEBPACK_IMPORTED_MODULE_9__["StoragePluginWeb"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Storage", function() { return _web_storage__WEBPACK_IMPORTED_MODULE_9__["Storage"]; });
+
+/* harmony import */ var _web_toast__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./web/toast */ "./node_modules/@capacitor/core/dist/esm/web/toast.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ToastPluginWeb", function() { return _web_toast__WEBPACK_IMPORTED_MODULE_10__["ToastPluginWeb"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Toast", function() { return _web_toast__WEBPACK_IMPORTED_MODULE_10__["Toast"]; });
+
+
+
+
+
+
+
+
+
+
+
+
+Object(_web_index__WEBPACK_IMPORTED_MODULE_1__["mergeWebPlugins"])(_global__WEBPACK_IMPORTED_MODULE_0__["Plugins"]);
+var registerWebPlugin = function (plugin) {
+    Object(_web_index__WEBPACK_IMPORTED_MODULE_1__["mergeWebPlugin"])(_global__WEBPACK_IMPORTED_MODULE_0__["Plugins"], plugin);
 };
-
-
-var SplashScreen = /** @class */ (function (_super) {
-    __extends(SplashScreen, _super);
-    function SplashScreen() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    SplashScreen.prototype.show = function () { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "show", { "sync": true }, arguments); };
-    SplashScreen.prototype.hide = function () { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "hide", { "sync": true }, arguments); };
-    SplashScreen.pluginName = "SplashScreen";
-    SplashScreen.plugin = "cordova-plugin-splashscreen";
-    SplashScreen.pluginRef = "navigator.splashscreen";
-    SplashScreen.repo = "https://github.com/apache/cordova-plugin-splashscreen";
-    SplashScreen.platforms = ["Amazon Fire OS", "Android", "iOS", "Windows"];
-    SplashScreen = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()
-    ], SplashScreen);
-    return SplashScreen;
-}(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["IonicNativePlugin"]));
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9zcmMvQGlvbmljLW5hdGl2ZS9wbHVnaW5zL3NwbGFzaC1zY3JlZW4vbmd4L2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxPQUFPLEVBQUUsVUFBVSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzNDLE9BQU8sOEJBQXNDLE1BQU0sb0JBQW9CLENBQUM7O0lBMkJ0QyxnQ0FBaUI7Ozs7SUFRakQsMkJBQUk7SUFTSiwyQkFBSTs7Ozs7O0lBakJPLFlBQVk7UUFEeEIsVUFBVSxFQUFFO09BQ0EsWUFBWTt1QkE1QnpCO0VBNEJrQyxpQkFBaUI7U0FBdEMsWUFBWSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEluamVjdGFibGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IENvcmRvdmEsIElvbmljTmF0aXZlUGx1Z2luLCBQbHVnaW4gfSBmcm9tICdAaW9uaWMtbmF0aXZlL2NvcmUnO1xuXG5cbi8qKlxuICogQG5hbWUgU3BsYXNoIFNjcmVlblxuICogQGRlc2NyaXB0aW9uIFRoaXMgcGx1Z2luIGRpc3BsYXlzIGFuZCBoaWRlcyBhIHNwbGFzaCBzY3JlZW4gZHVyaW5nIGFwcGxpY2F0aW9uIGxhdW5jaC4gVGhlIG1ldGhvZHMgYmVsb3cgYWxsb3dzIHNob3dpbmcgYW5kIGhpZGluZyB0aGUgc3BsYXNoc2NyZWVuIGFmdGVyIHRoZSBhcHAgaGFzIGxvYWRlZC5cbiAqIEB1c2FnZVxuICogYGBgdHlwZXNjcmlwdFxuICogaW1wb3J0IHsgU3BsYXNoU2NyZWVuIH0gZnJvbSAnQGlvbmljLW5hdGl2ZS9zcGxhc2gtc2NyZWVuJztcbiAqXG4gKiBjb25zdHJ1Y3Rvcihwcml2YXRlIHNwbGFzaFNjcmVlbjogU3BsYXNoU2NyZWVuKSB7IH1cbiAqXG4gKiAuLi5cbiAqXG4gKiB0aGlzLnNwbGFzaFNjcmVlbi5zaG93KCk7XG4gKlxuICogdGhpcy5zcGxhc2hTY3JlZW4uaGlkZSgpO1xuICogYGBgXG4gKi9cbkBQbHVnaW4oe1xuICBwbHVnaW5OYW1lOiAnU3BsYXNoU2NyZWVuJyxcbiAgcGx1Z2luOiAnY29yZG92YS1wbHVnaW4tc3BsYXNoc2NyZWVuJyxcbiAgcGx1Z2luUmVmOiAnbmF2aWdhdG9yLnNwbGFzaHNjcmVlbicsXG4gIHJlcG86ICdodHRwczovL2dpdGh1Yi5jb20vYXBhY2hlL2NvcmRvdmEtcGx1Z2luLXNwbGFzaHNjcmVlbicsXG4gIHBsYXRmb3JtczogWydBbWF6b24gRmlyZSBPUycsICdBbmRyb2lkJywgJ2lPUycsICdXaW5kb3dzJ11cbn0pXG5ASW5qZWN0YWJsZSgpXG5leHBvcnQgY2xhc3MgU3BsYXNoU2NyZWVuIGV4dGVuZHMgSW9uaWNOYXRpdmVQbHVnaW4ge1xuXG4gIC8qKlxuICAgKiBTaG93cyB0aGUgc3BsYXNoc2NyZWVuXG4gICAqL1xuICBAQ29yZG92YSh7XG4gICAgc3luYzogdHJ1ZVxuICB9KVxuICBzaG93KCk6IHZvaWQge1xuICB9XG5cbiAgLyoqXG4gICAqIEhpZGVzIHRoZSBzcGxhc2hzY3JlZW5cbiAgICovXG4gIEBDb3Jkb3ZhKHtcbiAgICBzeW5jOiB0cnVlXG4gIH0pXG4gIGhpZGUoKTogdm9pZCB7XG4gIH1cblxufVxuIl19
+//# sourceMappingURL=web-plugins.js.map
 
 /***/ }),
 
-/***/ "./node_modules/@ionic-native/status-bar/ngx/index.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@ionic-native/status-bar/ngx/index.js ***!
-  \************************************************************/
-/*! exports provided: StatusBar */
+/***/ "./node_modules/@capacitor/core/dist/esm/web-runtime.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web-runtime.js ***!
+  \**************************************************************/
+/*! exports provided: CapacitorWeb */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StatusBar", function() { return StatusBar; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _ionic_native_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic-native/core */ "./node_modules/@ionic-native/core/index.js");
-var __extends = (undefined && undefined.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-var StatusBar = /** @class */ (function (_super) {
-    __extends(StatusBar, _super);
-    function StatusBar() {
-        return _super !== null && _super.apply(this, arguments) || this;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CapacitorWeb", function() { return CapacitorWeb; });
+var CapacitorWeb = /** @class */ (function () {
+    function CapacitorWeb() {
+        var _this = this;
+        this.Plugins = {};
+        this.platform = 'web';
+        this.isNative = false;
+        // Build a proxy for the Plugins object that returns the "Noop Plugin"
+        // if a plugin isn't available
+        this.Plugins = new Proxy(this.Plugins, {
+            get: function (target, prop) {
+                if (typeof target[prop] === 'undefined') {
+                    var thisRef_1 = _this;
+                    return new Proxy({}, {
+                        get: function (_target, _prop) {
+                            if (typeof _target[_prop] === 'undefined') {
+                                return thisRef_1.pluginMethodNoop.bind(thisRef_1, _target, _prop, prop);
+                            }
+                            else {
+                                return _target[_prop];
+                            }
+                        }
+                    });
+                }
+                else {
+                    return target[prop];
+                }
+            }
+        });
     }
-    StatusBar.prototype.overlaysWebView = function (doesOverlay) { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "overlaysWebView", { "sync": true }, arguments); };
-    StatusBar.prototype.styleDefault = function () { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "styleDefault", { "sync": true }, arguments); };
-    StatusBar.prototype.styleLightContent = function () { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "styleLightContent", { "sync": true }, arguments); };
-    StatusBar.prototype.styleBlackTranslucent = function () { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "styleBlackTranslucent", { "sync": true }, arguments); };
-    StatusBar.prototype.styleBlackOpaque = function () { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "styleBlackOpaque", { "sync": true }, arguments); };
-    StatusBar.prototype.backgroundColorByName = function (colorName) { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "backgroundColorByName", { "sync": true }, arguments); };
-    StatusBar.prototype.backgroundColorByHexString = function (hexString) { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "backgroundColorByHexString", { "sync": true }, arguments); };
-    StatusBar.prototype.hide = function () { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "hide", { "sync": true }, arguments); };
-    StatusBar.prototype.show = function () { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordova"])(this, "show", { "sync": true }, arguments); };
-    Object.defineProperty(StatusBar.prototype, "isVisible", {
-        get: function () { return Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordovaPropertyGet"])(this, "isVisible"); },
-        set: function (value) { Object(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["cordovaPropertySet"])(this, "isVisible", value); },
-        enumerable: true,
-        configurable: true
-    });
-    StatusBar.pluginName = "StatusBar";
-    StatusBar.plugin = "cordova-plugin-statusbar";
-    StatusBar.pluginRef = "StatusBar";
-    StatusBar.repo = "https://github.com/apache/cordova-plugin-statusbar";
-    StatusBar.platforms = ["Android", "iOS", "Windows"];
-    StatusBar = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()
-    ], StatusBar);
-    return StatusBar;
-}(_ionic_native_core__WEBPACK_IMPORTED_MODULE_1__["IonicNativePlugin"]));
+    CapacitorWeb.prototype.pluginMethodNoop = function (_target, _prop, pluginName) {
+        return Promise.reject(pluginName + " does not have web implementation.");
+    };
+    CapacitorWeb.prototype.getPlatform = function () {
+        return this.platform;
+    };
+    CapacitorWeb.prototype.isPluginAvailable = function (name) {
+        return this.Plugins.hasOwnProperty(name);
+    };
+    CapacitorWeb.prototype.handleError = function (e) {
+        console.error(e);
+    };
+    return CapacitorWeb;
+}());
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9zcmMvQGlvbmljLW5hdGl2ZS9wbHVnaW5zL3N0YXR1cy1iYXIvbmd4L2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxPQUFPLEVBQUUsVUFBVSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzNDLE9BQU8sc0VBQXVELE1BQU0sb0JBQW9CLENBQUM7O0lBaUMxRCw2QkFBaUI7Ozs7SUFnQjlDLG1DQUFlLGFBQUMsV0FBb0I7SUFTcEMsZ0NBQVk7SUFTWixxQ0FBaUI7SUFTakIseUNBQXFCO0lBU3JCLG9DQUFnQjtJQWNoQix5Q0FBcUIsYUFBQyxTQUFpQjtJQWF2Qyw4Q0FBMEIsYUFBQyxTQUFpQjtJQVM1Qyx3QkFBSTtJQVNKLHdCQUFJOzBCQTVGSixnQ0FBUzs7Ozs7Ozs7Ozs7SUFMRSxTQUFTO1FBRHJCLFVBQVUsRUFBRTtPQUNBLFNBQVM7b0JBbEN0QjtFQWtDK0IsaUJBQWlCO1NBQW5DLFNBQVMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBJbmplY3RhYmxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBDb3Jkb3ZhLCBDb3Jkb3ZhUHJvcGVydHksIElvbmljTmF0aXZlUGx1Z2luLCBQbHVnaW4gfSBmcm9tICdAaW9uaWMtbmF0aXZlL2NvcmUnO1xuXG4vKipcbiAqIEBuYW1lIFN0YXR1cyBCYXJcbiAqIEBkZXNjcmlwdGlvblxuICogTWFuYWdlIHRoZSBhcHBlYXJhbmNlIG9mIHRoZSBuYXRpdmUgc3RhdHVzIGJhci5cbiAqXG4gKiBSZXF1aXJlcyBDb3Jkb3ZhIHBsdWdpbjogYGNvcmRvdmEtcGx1Z2luLXN0YXR1c2JhcmAuIEZvciBtb3JlIGluZm8sIHBsZWFzZSBzZWUgdGhlIFtTdGF0dXNCYXIgcGx1Z2luIGRvY3NdKGh0dHBzOi8vZ2l0aHViLmNvbS9hcGFjaGUvY29yZG92YS1wbHVnaW4tc3RhdHVzYmFyKS5cbiAqXG4gKiBAdXNhZ2VcbiAqIGBgYHR5cGVzY3JpcHRcbiAqIGltcG9ydCB7IFN0YXR1c0JhciB9IGZyb20gJ0Bpb25pYy1uYXRpdmUvc3RhdHVzLWJhcic7XG4gKlxuICogY29uc3RydWN0b3IocHJpdmF0ZSBzdGF0dXNCYXI6IFN0YXR1c0JhcikgeyB9XG4gKlxuICogLi4uXG4gKlxuICogLy8gbGV0IHN0YXR1cyBiYXIgb3ZlcmxheSB3ZWJ2aWV3XG4gKiB0aGlzLnN0YXR1c0Jhci5vdmVybGF5c1dlYlZpZXcodHJ1ZSk7XG4gKlxuICogLy8gc2V0IHN0YXR1cyBiYXIgdG8gd2hpdGVcbiAqIHRoaXMuc3RhdHVzQmFyLmJhY2tncm91bmRDb2xvckJ5SGV4U3RyaW5nKCcjZmZmZmZmJyk7XG4gKiBgYGBcbiAqXG4gKi9cbkBQbHVnaW4oe1xuICBwbHVnaW5OYW1lOiAnU3RhdHVzQmFyJyxcbiAgcGx1Z2luOiAnY29yZG92YS1wbHVnaW4tc3RhdHVzYmFyJyxcbiAgcGx1Z2luUmVmOiAnU3RhdHVzQmFyJyxcbiAgcmVwbzogJ2h0dHBzOi8vZ2l0aHViLmNvbS9hcGFjaGUvY29yZG92YS1wbHVnaW4tc3RhdHVzYmFyJyxcbiAgcGxhdGZvcm1zOiBbJ0FuZHJvaWQnLCAnaU9TJywgJ1dpbmRvd3MnXVxufSlcbkBJbmplY3RhYmxlKClcbmV4cG9ydCBjbGFzcyBTdGF0dXNCYXIgZXh0ZW5kcyBJb25pY05hdGl2ZVBsdWdpbiB7XG4gIC8qKlxuICAgKiBXaGV0aGVyIHRoZSBTdGF0dXNCYXIgaXMgY3VycmVudGx5IHZpc2libGUgb3Igbm90LlxuICAgKi9cbiAgQENvcmRvdmFQcm9wZXJ0eSgpXG4gIGlzVmlzaWJsZTogYm9vbGVhbjtcblxuICAvKipcbiAgICogU2V0IHdoZXRoZXIgdGhlIHN0YXR1cyBiYXIgb3ZlcmxheXMgdGhlIG1haW4gYXBwIHZpZXcuIFRoZSBkZWZhdWx0XG4gICAqIGlzIHRydWUuXG4gICAqXG4gICAqIEBwYXJhbSB7Ym9vbGVhbn0gZG9lc092ZXJsYXkgIFdoZXRoZXIgdGhlIHN0YXR1cyBiYXIgb3ZlcmxheXMgdGhlIG1haW4gYXBwIHZpZXcuXG4gICAqL1xuICBAQ29yZG92YSh7XG4gICAgc3luYzogdHJ1ZVxuICB9KVxuICBvdmVybGF5c1dlYlZpZXcoZG9lc092ZXJsYXk6IGJvb2xlYW4pIHtcbiAgfVxuXG4gIC8qKlxuICAgKiBVc2UgdGhlIGRlZmF1bHQgc3RhdHVzYmFyIChkYXJrIHRleHQsIGZvciBsaWdodCBiYWNrZ3JvdW5kcykuXG4gICAqL1xuICBAQ29yZG92YSh7XG4gICAgc3luYzogdHJ1ZVxuICB9KVxuICBzdHlsZURlZmF1bHQoKSB7XG4gIH1cblxuICAvKipcbiAgICogVXNlIHRoZSBsaWdodENvbnRlbnQgc3RhdHVzYmFyIChsaWdodCB0ZXh0LCBmb3IgZGFyayBiYWNrZ3JvdW5kcykuXG4gICAqL1xuICBAQ29yZG92YSh7XG4gICAgc3luYzogdHJ1ZVxuICB9KVxuICBzdHlsZUxpZ2h0Q29udGVudCgpIHtcbiAgfVxuXG4gIC8qKlxuICAgKiBVc2UgdGhlIGJsYWNrVHJhbnNsdWNlbnQgc3RhdHVzYmFyIChsaWdodCB0ZXh0LCBmb3IgZGFyayBiYWNrZ3JvdW5kcykuXG4gICAqL1xuICBAQ29yZG92YSh7XG4gICAgc3luYzogdHJ1ZVxuICB9KVxuICBzdHlsZUJsYWNrVHJhbnNsdWNlbnQoKSB7XG4gIH1cblxuICAvKipcbiAgICogVXNlIHRoZSBibGFja09wYXF1ZSBzdGF0dXNiYXIgKGxpZ2h0IHRleHQsIGZvciBkYXJrIGJhY2tncm91bmRzKS5cbiAgICovXG4gIEBDb3Jkb3ZhKHtcbiAgICBzeW5jOiB0cnVlXG4gIH0pXG4gIHN0eWxlQmxhY2tPcGFxdWUoKSB7XG4gIH1cblxuICAvKipcbiAgICogU2V0IHRoZSBzdGF0dXMgYmFyIHRvIGEgc3BlY2lmaWMgbmFtZWQgY29sb3IuIFZhbGlkIG9wdGlvbnM6XG4gICAqIGJsYWNrLCBkYXJrR3JheSwgbGlnaHRHcmF5LCB3aGl0ZSwgZ3JheSwgcmVkLCBncmVlbiwgYmx1ZSwgY3lhbiwgeWVsbG93LCBtYWdlbnRhLCBvcmFuZ2UsIHB1cnBsZSwgYnJvd24uXG4gICAqXG4gICAqIGlPUyBub3RlOiB5b3UgbXVzdCBjYWxsIFN0YXR1c0Jhci5vdmVybGF5c1dlYlZpZXcoZmFsc2UpIHRvIGVuYWJsZSBjb2xvciBjaGFuZ2luZy5cbiAgICpcbiAgICogQHBhcmFtIHtzdHJpbmd9IGNvbG9yTmFtZSAgVGhlIG5hbWUgb2YgdGhlIGNvbG9yIChmcm9tIGFib3ZlKVxuICAgKi9cbiAgQENvcmRvdmEoe1xuICAgIHN5bmM6IHRydWVcbiAgfSlcbiAgYmFja2dyb3VuZENvbG9yQnlOYW1lKGNvbG9yTmFtZTogc3RyaW5nKSB7XG4gIH1cblxuICAvKipcbiAgICogU2V0IHRoZSBzdGF0dXMgYmFyIHRvIGEgc3BlY2lmaWMgaGV4IGNvbG9yIChDU1Mgc2hvcnRoYW5kIHN1cHBvcnRlZCEpLlxuICAgKlxuICAgKiBpT1Mgbm90ZTogeW91IG11c3QgY2FsbCBTdGF0dXNCYXIub3ZlcmxheXNXZWJWaWV3KGZhbHNlKSB0byBlbmFibGUgY29sb3IgY2hhbmdpbmcuXG4gICAqXG4gICAqIEBwYXJhbSB7c3RyaW5nfSBoZXhTdHJpbmcgIFRoZSBoZXggdmFsdWUgb2YgdGhlIGNvbG9yLlxuICAgKi9cbiAgQENvcmRvdmEoe1xuICAgIHN5bmM6IHRydWVcbiAgfSlcbiAgYmFja2dyb3VuZENvbG9yQnlIZXhTdHJpbmcoaGV4U3RyaW5nOiBzdHJpbmcpIHtcbiAgfVxuXG4gIC8qKlxuICAgKiBIaWRlIHRoZSBTdGF0dXNCYXJcbiAgICovXG4gIEBDb3Jkb3ZhKHtcbiAgICBzeW5jOiB0cnVlXG4gIH0pXG4gIGhpZGUoKSB7XG4gIH1cblxuICAvKipcbiAgICogU2hvdyB0aGUgU3RhdHVzQmFyXG4gICAqL1xuICBAQ29yZG92YSh7XG4gICAgc3luYzogdHJ1ZVxuICB9KVxuICBzaG93KCkge1xuICB9XG5cbn1cbiJdfQ==
+//# sourceMappingURL=web-runtime.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/browser.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/browser.js ***!
+  \**************************************************************/
+/*! exports provided: BrowserPluginWeb, Browser */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowserPluginWeb", function() { return BrowserPluginWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Browser", function() { return Browser; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+
+
+var BrowserPluginWeb = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](BrowserPluginWeb, _super);
+    function BrowserPluginWeb() {
+        return _super.call(this, {
+            name: 'Browser',
+            platforms: ['web']
+        }) || this;
+    }
+    BrowserPluginWeb.prototype.open = function (options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this._lastWindow = window.open(options.url, options.windowName || "_blank");
+                return [2 /*return*/, Promise.resolve()];
+            });
+        });
+    };
+    BrowserPluginWeb.prototype.prefetch = function (_options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                // Does nothing
+                return [2 /*return*/, Promise.resolve()];
+            });
+        });
+    };
+    BrowserPluginWeb.prototype.close = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                this._lastWindow && this._lastWindow.close();
+                return [2 /*return*/, Promise.resolve()];
+            });
+        });
+    };
+    return BrowserPluginWeb;
+}(_index__WEBPACK_IMPORTED_MODULE_1__["WebPlugin"]));
+
+var Browser = new BrowserPluginWeb();
+
+//# sourceMappingURL=browser.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/camera.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/camera.js ***!
+  \*************************************************************/
+/*! exports provided: CameraPluginWeb, Camera */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CameraPluginWeb", function() { return CameraPluginWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Camera", function() { return Camera; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+
+
+//import '@ionic/pwa-elements';
+var CameraPluginWeb = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](CameraPluginWeb, _super);
+    function CameraPluginWeb() {
+        return _super.call(this, {
+            name: 'Camera',
+            platforms: ['web']
+        }) || this;
+    }
+    CameraPluginWeb.prototype.getPhoto = function (options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                options;
+                return [2 /*return*/, new Promise(function (resolve, reject) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                        var _this = this;
+                        var cameraModal;
+                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                            switch (_a.label) {
+                                case 0:
+                                    cameraModal = document.createElement('ion-pwa-camera-modal');
+                                    document.body.appendChild(cameraModal);
+                                    return [4 /*yield*/, cameraModal.componentOnReady()];
+                                case 1:
+                                    _a.sent();
+                                    cameraModal.addEventListener('onPhoto', function (e) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                                        var photo, _a;
+                                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                                            switch (_b.label) {
+                                                case 0:
+                                                    photo = e.detail;
+                                                    if (!(photo === null)) return [3 /*break*/, 1];
+                                                    reject();
+                                                    return [3 /*break*/, 3];
+                                                case 1:
+                                                    _a = resolve;
+                                                    return [4 /*yield*/, this._getCameraPhoto(photo)];
+                                                case 2:
+                                                    _a.apply(void 0, [_b.sent()]);
+                                                    _b.label = 3;
+                                                case 3:
+                                                    cameraModal.dismiss();
+                                                    return [2 /*return*/];
+                                            }
+                                        });
+                                    }); });
+                                    cameraModal.present();
+                                    return [2 /*return*/];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    CameraPluginWeb.prototype._getCameraPhoto = function (photo) {
+        return new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            reader.readAsDataURL(photo);
+            reader.onloadend = function () {
+                resolve({
+                    base64Data: reader.result,
+                    webPath: reader.result,
+                    format: 'jpeg'
+                });
+            };
+            reader.onerror = function (e) {
+                reject(e);
+            };
+        });
+    };
+    return CameraPluginWeb;
+}(_index__WEBPACK_IMPORTED_MODULE_1__["WebPlugin"]));
+
+var Camera = new CameraPluginWeb();
+
+//# sourceMappingURL=camera.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/clipboard.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/clipboard.js ***!
+  \****************************************************************/
+/*! exports provided: ClipboardPluginWeb, Clipboard */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClipboardPluginWeb", function() { return ClipboardPluginWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Clipboard", function() { return Clipboard; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+
+
+var ClipboardPluginWeb = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ClipboardPluginWeb, _super);
+    function ClipboardPluginWeb() {
+        return _super.call(this, {
+            name: 'Clipboard',
+            platforms: ['web']
+        }) || this;
+    }
+    ClipboardPluginWeb.prototype.write = function (options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        if (!navigator.clipboard) {
+                            return [2 /*return*/, Promise.reject('Clipboard API not available in this browser')];
+                        }
+                        if (!(options.string || options.url)) return [3 /*break*/, 2];
+                        return [4 /*yield*/, navigator.clipboard.writeText(options.string || options.label)];
+                    case 1:
+                        _a.sent();
+                        return [3 /*break*/, 3];
+                    case 2:
+                        if (options.image) {
+                            return [2 /*return*/, Promise.reject("Setting images not supported on the web")];
+                        }
+                        _a.label = 3;
+                    case 3: return [2 /*return*/, Promise.resolve()];
+                }
+            });
+        });
+    };
+    ClipboardPluginWeb.prototype.read = function (_options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var data, _i, _a, item;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        if (!navigator.clipboard) {
+                            return [2 /*return*/, Promise.reject('Clipboard API not available in this browser')];
+                        }
+                        return [4 /*yield*/, navigator.clipboard.read()];
+                    case 1:
+                        data = _b.sent();
+                        for (_i = 0, _a = data.items; _i < _a.length; _i++) {
+                            item = _a[_i];
+                            if (item.type === 'text/plain') {
+                                return [2 /*return*/, Promise.resolve(item.getAs('text/plain'))];
+                            }
+                        }
+                        return [2 /*return*/, Promise.reject('Unable to get data from clipboard')];
+                }
+            });
+        });
+    };
+    return ClipboardPluginWeb;
+}(_index__WEBPACK_IMPORTED_MODULE_1__["WebPlugin"]));
+
+var Clipboard = new ClipboardPluginWeb();
+
+//# sourceMappingURL=clipboard.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/device.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/device.js ***!
+  \*************************************************************/
+/*! exports provided: DevicePluginWeb, Device */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DevicePluginWeb", function() { return DevicePluginWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Device", function() { return Device; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util */ "./node_modules/@capacitor/core/dist/esm/util.js");
+
+
+
+var DevicePluginWeb = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](DevicePluginWeb, _super);
+    function DevicePluginWeb() {
+        return _super.call(this, {
+            name: 'Device',
+            platforms: ['web']
+        }) || this;
+    }
+    DevicePluginWeb.prototype.getInfo = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var ua, uaFields, battery, e_1;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        ua = navigator.userAgent;
+                        uaFields = this.parseUa(ua);
+                        battery = {};
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 4]);
+                        return [4 /*yield*/, navigator.getBattery()];
+                    case 2:
+                        battery = _a.sent();
+                        return [3 /*break*/, 4];
+                    case 3:
+                        e_1 = _a.sent();
+                        return [3 /*break*/, 4];
+                    case 4: return [2 /*return*/, Promise.resolve({
+                            model: uaFields.model,
+                            platform: "web",
+                            appVersion: '',
+                            osVersion: uaFields.osVersion,
+                            manufacturer: navigator.vendor,
+                            isVirtual: false,
+                            batteryLevel: battery.level,
+                            isCharging: battery.charging,
+                            uuid: this.getUid()
+                        })];
+                }
+            });
+        });
+    };
+    DevicePluginWeb.prototype.parseUa = function (_ua) {
+        var uaFields = {};
+        var start = _ua.indexOf('(') + 1;
+        var end = _ua.indexOf(') AppleWebKit');
+        if (_ua.indexOf(') Gecko') !== -1) {
+            end = _ua.indexOf(') Gecko');
+        }
+        var fields = _ua.substring(start, end);
+        if (_ua.indexOf('Android') !== -1) {
+            uaFields.model = fields.replace("; wv", "").split("; ").pop().split(' Build')[0];
+            uaFields.osVersion = fields.split('; ')[1];
+        }
+        else {
+            uaFields.model = fields.split('; ')[0];
+            if (navigator.oscpu) {
+                uaFields.osVersion = navigator.oscpu;
+            }
+            else {
+                if (_ua.indexOf('Windows') !== -1) {
+                    uaFields.osVersion = fields;
+                }
+                else {
+                    var lastParts = fields.split('; ').pop().replace(" like Mac OS X", "").split(" ");
+                    uaFields.osVersion = lastParts[lastParts.length - 1].replace(/_/g, ".");
+                }
+            }
+        }
+        return uaFields;
+    };
+    DevicePluginWeb.prototype.getUid = function () {
+        var uid = window.localStorage.getItem('_capuid');
+        if (uid) {
+            return uid;
+        }
+        uid = Object(_util__WEBPACK_IMPORTED_MODULE_2__["uuid4"])();
+        window.localStorage.setItem('_capuid', uid);
+        return uid;
+    };
+    return DevicePluginWeb;
+}(_index__WEBPACK_IMPORTED_MODULE_1__["WebPlugin"]));
+
+var Device = new DevicePluginWeb();
+
+//# sourceMappingURL=device.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/geolocation.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/geolocation.js ***!
+  \******************************************************************/
+/*! exports provided: GeolocationPluginWeb, Geolocation */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GeolocationPluginWeb", function() { return GeolocationPluginWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Geolocation", function() { return Geolocation; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../util */ "./node_modules/@capacitor/core/dist/esm/util.js");
+
+
+
+var GeolocationPluginWeb = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](GeolocationPluginWeb, _super);
+    function GeolocationPluginWeb() {
+        return _super.call(this, {
+            name: 'Geolocation',
+            platforms: ['web']
+        }) || this;
+    }
+    GeolocationPluginWeb.prototype.getCurrentPosition = function (options) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            return _this.requestPermissions().then(function (_result) {
+                window.navigator.geolocation.getCurrentPosition(function (pos) {
+                    resolve(pos);
+                }, function (err) {
+                    reject(err);
+                }, Object(_util__WEBPACK_IMPORTED_MODULE_2__["extend"])({
+                    enableHighAccuracy: true,
+                    timeout: 10000,
+                    maximumAge: 0
+                }, options));
+            });
+        });
+    };
+    GeolocationPluginWeb.prototype.watchPosition = function (options, callback) {
+        var id = window.navigator.geolocation.watchPosition(function (pos) {
+            callback(pos);
+        }, function (err) {
+            callback(null, err);
+        }, Object(_util__WEBPACK_IMPORTED_MODULE_2__["extend"])({
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+        }, options));
+        return "" + id;
+    };
+    GeolocationPluginWeb.prototype.clearWatch = function (options) {
+        window.navigator.geolocation.clearWatch(parseInt(options.id, 10));
+        return Promise.resolve();
+    };
+    return GeolocationPluginWeb;
+}(_index__WEBPACK_IMPORTED_MODULE_1__["WebPlugin"]));
+
+var Geolocation = new GeolocationPluginWeb();
+
+//# sourceMappingURL=geolocation.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/index.js ***!
+  \************************************************************/
+/*! exports provided: WebPluginRegistry, WebPlugins, WebPlugin, mergeWebPlugins, mergeWebPlugin */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebPluginRegistry", function() { return WebPluginRegistry; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebPlugins", function() { return WebPlugins; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WebPlugin", function() { return WebPlugin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mergeWebPlugins", function() { return mergeWebPlugins; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mergeWebPlugin", function() { return mergeWebPlugin; });
+var WebPluginRegistry = /** @class */ (function () {
+    function WebPluginRegistry() {
+        this.plugins = {};
+        this.loadedPlugins = {};
+    }
+    WebPluginRegistry.prototype.addPlugin = function (plugin) {
+        this.plugins[plugin.config.name] = plugin;
+    };
+    WebPluginRegistry.prototype.getPlugin = function (name) {
+        return this.plugins[name];
+    };
+    WebPluginRegistry.prototype.loadPlugin = function (name) {
+        var plugin = this.getPlugin(name);
+        if (!plugin) {
+            console.error("Unable to load web plugin " + name + ", no such plugin found.");
+            return;
+        }
+        plugin.load();
+    };
+    WebPluginRegistry.prototype.getPlugins = function () {
+        var p = [];
+        for (var name_1 in this.plugins) {
+            p.push(this.plugins[name_1]);
+        }
+        return p;
+    };
+    return WebPluginRegistry;
+}());
+
+var WebPlugins = new WebPluginRegistry();
+
+var WebPlugin = /** @class */ (function () {
+    function WebPlugin(config, pluginRegistry) {
+        this.config = config;
+        this.loaded = false;
+        this.listeners = {};
+        this.windowListeners = {};
+        if (!pluginRegistry) {
+            WebPlugins.addPlugin(this);
+        }
+        else {
+            pluginRegistry.addPlugin(this);
+        }
+    }
+    WebPlugin.prototype.addWindowListener = function (handle) {
+        window.addEventListener(handle.windowEventName, handle.handler);
+        handle.registered = true;
+    };
+    WebPlugin.prototype.removeWindowListener = function (handle) {
+        if (!handle) {
+            return;
+        }
+        window.removeEventListener(handle.windowEventName, handle.handler);
+        handle.registered = false;
+    };
+    WebPlugin.prototype.addListener = function (eventName, listenerFunc) {
+        var _this = this;
+        var listeners = this.listeners[eventName];
+        if (!listeners) {
+            this.listeners[eventName] = [];
+        }
+        this.listeners[eventName].push(listenerFunc);
+        // If we haven't added a window listener for this event and it requires one,
+        // go ahead and add it
+        var windowListener = this.windowListeners[eventName];
+        if (windowListener && !windowListener.registered) {
+            this.addWindowListener(windowListener);
+        }
+        return {
+            remove: function () {
+                _this.removeListener(eventName, listenerFunc);
+            }
+        };
+    };
+    WebPlugin.prototype.removeListener = function (eventName, listenerFunc) {
+        var listeners = this.listeners[eventName];
+        if (!listeners) {
+            return;
+        }
+        var index = listeners.indexOf(listenerFunc);
+        this.listeners[eventName].splice(index, 1);
+        // If there are no more listeners for this type of event,
+        // remove the window listener
+        if (!this.listeners[eventName].length) {
+            this.removeWindowListener(this.windowListeners[eventName]);
+        }
+    };
+    WebPlugin.prototype.notifyListeners = function (eventName, data) {
+        var listeners = this.listeners[eventName];
+        listeners.forEach(function (listener) { return listener(data); });
+    };
+    WebPlugin.prototype.hasListeners = function (eventName) {
+        return !!this.listeners[eventName].length;
+    };
+    WebPlugin.prototype.registerWindowListener = function (windowEventName, pluginEventName) {
+        var _this = this;
+        this.windowListeners[pluginEventName] = {
+            registered: false,
+            windowEventName: windowEventName,
+            pluginEventName: pluginEventName,
+            handler: function (event) {
+                _this.notifyListeners(pluginEventName, event);
+            }
+        };
+    };
+    WebPlugin.prototype.requestPermissions = function () {
+        if (Capacitor.isNative) {
+            return Capacitor.nativePromise(this.config.name, 'requestPermissions', {});
+        }
+        else {
+            return Promise.resolve({ results: [] });
+        }
+    };
+    WebPlugin.prototype.load = function () {
+        this.loaded = true;
+    };
+    return WebPlugin;
+}());
+
+var shouldMergeWebPlugin = function (plugin) {
+    return plugin.config.platforms && plugin.config.platforms.indexOf(Capacitor.platform) >= 0;
+};
+/**
+ * For all our known web plugins, merge them into the global plugins
+ * registry if they aren't already existing. If they don't exist, that
+ * means there's no existing native implementation for it.
+ * @param knownPlugins the Capacitor.Plugins global registry.
+ */
+var mergeWebPlugins = function (knownPlugins) {
+    var plugins = WebPlugins.getPlugins();
+    for (var _i = 0, plugins_1 = plugins; _i < plugins_1.length; _i++) {
+        var plugin = plugins_1[_i];
+        mergeWebPlugin(knownPlugins, plugin);
+    }
+};
+var mergeWebPlugin = function (knownPlugins, plugin) {
+    // If we already have a plugin registered (meaning it was defined in the native layer),
+    // then we should only overwrite it if the corresponding web plugin activates on
+    // a certain platform. For example: Geolocation uses the WebPlugin on Android but not iOS
+    if (knownPlugins.hasOwnProperty(plugin.config.name) && !shouldMergeWebPlugin(plugin)) {
+        return;
+    }
+    knownPlugins[plugin.config.name] = plugin;
+};
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/modals.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/modals.js ***!
+  \*************************************************************/
+/*! exports provided: ModalsPluginWeb, Modals */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalsPluginWeb", function() { return ModalsPluginWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Modals", function() { return Modals; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+
+
+var ModalsPluginWeb = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ModalsPluginWeb, _super);
+    function ModalsPluginWeb() {
+        return _super.call(this, {
+            name: 'Modals',
+            platforms: ['web']
+        }) || this;
+    }
+    ModalsPluginWeb.prototype.alert = function (options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                window.alert(options.message);
+                return [2 /*return*/, Promise.resolve()];
+            });
+        });
+    };
+    ModalsPluginWeb.prototype.prompt = function (options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var val;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                val = window.prompt(options.message, options.inputPlaceholder || '');
+                return [2 /*return*/, Promise.resolve({
+                        value: val,
+                        cancelled: val === null
+                    })];
+            });
+        });
+    };
+    ModalsPluginWeb.prototype.confirm = function (options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var val;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                val = window.confirm(options.message);
+                return [2 /*return*/, Promise.resolve({
+                        value: val
+                    })];
+            });
+        });
+    };
+    ModalsPluginWeb.prototype.showActions = function (options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, _reject) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                        var controller, items, actionSheetElement;
+                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                            switch (_a.label) {
+                                case 0:
+                                    controller = document.querySelector('ion-action-sheet-controller');
+                                    if (!controller) {
+                                        controller = document.createElement('ion-action-sheet-controller');
+                                        document.body.appendChild(controller);
+                                    }
+                                    return [4 /*yield*/, controller.componentOnReady()];
+                                case 1:
+                                    _a.sent();
+                                    items = options.options.map(function (o, i) {
+                                        return {
+                                            text: o.title,
+                                            role: o.style && o.style.toLowerCase() || '',
+                                            icon: o.icon || '',
+                                            handler: function () {
+                                                resolve({
+                                                    index: i
+                                                });
+                                            }
+                                        };
+                                    });
+                                    return [4 /*yield*/, controller.create({
+                                            title: options.title,
+                                            buttons: items
+                                        })];
+                                case 2:
+                                    actionSheetElement = _a.sent();
+                                    return [4 /*yield*/, actionSheetElement.present()];
+                                case 3:
+                                    _a.sent();
+                                    return [2 /*return*/];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    return ModalsPluginWeb;
+}(_index__WEBPACK_IMPORTED_MODULE_1__["WebPlugin"]));
+
+var Modals = new ModalsPluginWeb();
+
+//# sourceMappingURL=modals.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/share.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/share.js ***!
+  \************************************************************/
+/*! exports provided: SharePluginWeb, Share */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SharePluginWeb", function() { return SharePluginWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Share", function() { return Share; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+
+
+var SharePluginWeb = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](SharePluginWeb, _super);
+    function SharePluginWeb() {
+        return _super.call(this, {
+            name: 'Share',
+            platforms: ['web']
+        }) || this;
+    }
+    SharePluginWeb.prototype.share = function (options) {
+        if (!navigator.share) {
+            return Promise.reject("Web Share API not available");
+        }
+        return navigator.share({
+            title: options.title,
+            text: options.text,
+            url: options.url
+        });
+    };
+    return SharePluginWeb;
+}(_index__WEBPACK_IMPORTED_MODULE_1__["WebPlugin"]));
+
+var Share = new SharePluginWeb();
+
+//# sourceMappingURL=share.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/storage.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/storage.js ***!
+  \**************************************************************/
+/*! exports provided: StoragePluginWeb, Storage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoragePluginWeb", function() { return StoragePluginWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Storage", function() { return Storage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+
+
+var StoragePluginWeb = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](StoragePluginWeb, _super);
+    function StoragePluginWeb() {
+        var _this = _super.call(this, {
+            name: 'Storage',
+            platforms: ['web']
+        }) || this;
+        _this.KEY_PREFIX = "_cap_";
+        return _this;
+    }
+    StoragePluginWeb.prototype.get = function (options) {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            resolve({
+                value: window.localStorage.getItem(_this.makeKey(options.key))
+            });
+        });
+    };
+    StoragePluginWeb.prototype.set = function (options) {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            window.localStorage.setItem(_this.makeKey(options.key), options.value);
+            resolve();
+        });
+    };
+    StoragePluginWeb.prototype.remove = function (options) {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            window.localStorage.removeItem(_this.makeKey(options.key));
+            resolve();
+        });
+    };
+    StoragePluginWeb.prototype.keys = function () {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            resolve({
+                keys: Object.keys(localStorage).filter(function (k) { return _this.isKey(k); }).map(function (k) { return _this.getKey(k); })
+            });
+        });
+    };
+    StoragePluginWeb.prototype.clear = function () {
+        var _this = this;
+        return new Promise(function (resolve, _reject) {
+            Object.keys(localStorage)
+                .filter(function (k) { return _this.isKey(k); })
+                .forEach(function (k) { return window.localStorage.removeItem(k); });
+            resolve();
+        });
+    };
+    StoragePluginWeb.prototype.makeKey = function (key) {
+        return this.KEY_PREFIX + key;
+    };
+    StoragePluginWeb.prototype.isKey = function (key) {
+        return key.indexOf(this.KEY_PREFIX) === 0;
+    };
+    StoragePluginWeb.prototype.getKey = function (key) {
+        return key.substr(this.KEY_PREFIX.length);
+    };
+    return StoragePluginWeb;
+}(_index__WEBPACK_IMPORTED_MODULE_1__["WebPlugin"]));
+
+var Storage = new StoragePluginWeb();
+
+//# sourceMappingURL=storage.js.map
+
+/***/ }),
+
+/***/ "./node_modules/@capacitor/core/dist/esm/web/toast.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@capacitor/core/dist/esm/web/toast.js ***!
+  \************************************************************/
+/*! exports provided: ToastPluginWeb, Toast */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToastPluginWeb", function() { return ToastPluginWeb; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Toast", function() { return Toast; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./node_modules/@capacitor/core/dist/esm/web/index.js");
+
+
+var ToastPluginWeb = /** @class */ (function (_super) {
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ToastPluginWeb, _super);
+    function ToastPluginWeb() {
+        return _super.call(this, {
+            name: 'Toast',
+            platforms: ['web']
+        }) || this;
+    }
+    ToastPluginWeb.prototype.show = function (options) {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var controller, duration, toast;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        controller = document.querySelector('ion-toast-controller');
+                        if (!controller) {
+                            controller = document.createElement('ion-toast-controller');
+                            document.body.appendChild(controller);
+                        }
+                        return [4 /*yield*/, controller.componentOnReady()];
+                    case 1:
+                        _a.sent();
+                        duration = 3000;
+                        if (options.duration) {
+                            duration = options.duration === 'long' ? 5000 : 3000;
+                        }
+                        return [4 /*yield*/, controller.create({
+                                position: 'bottom',
+                                message: options.text,
+                                duration: duration,
+                            })];
+                    case 2:
+                        toast = _a.sent();
+                        return [4 /*yield*/, toast.present()];
+                    case 3: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
+    };
+    return ToastPluginWeb;
+}(_index__WEBPACK_IMPORTED_MODULE_1__["WebPlugin"]));
+
+var Toast = new ToastPluginWeb();
+
+//# sourceMappingURL=toast.js.map
 
 /***/ }),
 
