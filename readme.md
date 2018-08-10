@@ -63,3 +63,4 @@ or
 
 ionic integrations enable capacitor
 ionic build
+ionic cap add android
