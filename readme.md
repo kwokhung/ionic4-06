@@ -58,3 +58,7 @@ or
 
 ionic cordova platform add android
 ionic cordova run android
+
+or
+
+ionic integrations enable capacitor
